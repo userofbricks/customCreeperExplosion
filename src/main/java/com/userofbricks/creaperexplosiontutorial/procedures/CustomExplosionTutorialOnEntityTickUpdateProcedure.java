@@ -2,10 +2,9 @@ package com.userofbricks.creaperexplosiontutorial.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.scores.Scoreboard;
-import net.minecraft.world.scores.Objective;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
@@ -85,7 +84,7 @@ public class CustomExplosionTutorialOnEntityTickUpdateProcedure {
 			distance = distance + 1;
 		}
 		if (playerInRange) {
-			entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y()), 0));
+			entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CreaperExplosionTutorialModMobEffects.FUSE.get()) : false)) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(CreaperExplosionTutorialModMobEffects.FUSE.get(), 5, 1, (false), (false)));
@@ -99,15 +98,7 @@ public class CustomExplosionTutorialOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-		} else if (new Object() {
-			public int getScore(String score, Entity _ent) {
-				Scoreboard _sc = _ent.getLevel().getScoreboard();
-				Objective _so = _sc.getObjective(score);
-				if (_so != null)
-					return _sc.getOrCreatePlayerScore(_ent.getScoreboardName(), _so).getScore();
-				return 0;
-			}
-		}.getScore("ignition", entity) == 1) {
+		} else {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(CreaperExplosionTutorialModMobEffects.FUSE.get());
 		}

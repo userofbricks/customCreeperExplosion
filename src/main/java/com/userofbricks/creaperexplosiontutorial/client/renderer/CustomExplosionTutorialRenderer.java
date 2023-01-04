@@ -4,22 +4,17 @@ package com.userofbricks.creaperexplosiontutorial.client.renderer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.CreeperModel;
 
 import com.userofbricks.creaperexplosiontutorial.procedures.CustomExplosionTutorialEntityShakingConditionProcedure;
 import com.userofbricks.creaperexplosiontutorial.entity.CustomExplosionTutorialEntity;
 
-public class CustomExplosionTutorialRenderer
-		extends
-			HumanoidMobRenderer<CustomExplosionTutorialEntity, HumanoidModel<CustomExplosionTutorialEntity>> {
+public class CustomExplosionTutorialRenderer extends MobRenderer<CustomExplosionTutorialEntity, CreeperModel<CustomExplosionTutorialEntity>> {
 	public CustomExplosionTutorialRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
-				new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		super(context, new CreeperModel(context.bakeLayer(ModelLayers.CREEPER)), 0.5f);
 	}
 
 	@Override
