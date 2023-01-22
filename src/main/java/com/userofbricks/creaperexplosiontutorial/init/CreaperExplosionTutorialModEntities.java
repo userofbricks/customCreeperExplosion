@@ -36,6 +36,7 @@ public class CreaperExplosionTutorialModEntities {
 					.setCustomClientFactory(CreeperTheVanillaWayEntity::new)
 
 					.sized(0.6f, 1.7f));
+					.sized(0.6f, 1.7f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
