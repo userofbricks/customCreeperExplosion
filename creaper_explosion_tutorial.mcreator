@@ -49,42 +49,6 @@
       "registry_name": "custom_explosion_tutorial"
     },
     {
-      "name": "CustomExplosionTutorialRightClickedOnEntity",
-      "type": "procedure",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "custom_explosion_tutorial_right_clicked_on_entity",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "FuseEffectExpires",
       "type": "procedure",
       "sortid": 4,
@@ -117,22 +81,6 @@
       }
     },
     {
-      "name": "SetIngitionToFalse",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_ingition_to_false",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "CustomExplosionTutorialEntityShakingCondition",
       "type": "procedure",
       "sortid": 6,
@@ -148,6 +96,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "CreeperTheVanillaWay",
+      "type": "livingentity",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creeper_the_vanilla_way"
     }
   ],
   "variable_elements": [],
@@ -155,6 +111,8 @@
   "language_map": {
     "en_us": {
       "entity.creaper_explosion_tutorial.custom_explosion_tutorial": "Custom Explosion Tutorial",
+      "entity.creaper_explosion_tutorial.creeper_the_vanilla_way": "Creeper The Vanilla Way",
+      "item.creaper_explosion_tutorial.creeper_the_vanilla_way_spawn_egg": "Creeper The Vanilla Way Spawn Egg",
       "effect.creaper_explosion_tutorial.fuse": "Fuse",
       "item.creaper_explosion_tutorial.custom_explosion_tutorial_spawn_egg": "Custom Explosion Tutorial Spawn Egg"
     }

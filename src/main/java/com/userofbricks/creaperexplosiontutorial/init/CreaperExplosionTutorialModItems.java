@@ -19,4 +19,7 @@ public class CreaperExplosionTutorialModItems {
 	public static final RegistryObject<Item> CUSTOM_EXPLOSION_TUTORIAL = REGISTRY.register("custom_explosion_tutorial_spawn_egg",
 			() -> new ForgeSpawnEggItem(CreaperExplosionTutorialModEntities.CUSTOM_EXPLOSION_TUTORIAL, -1, -1,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> CREEPER_THE_VANILLA_WAY = REGISTRY.register("creeper_the_vanilla_way_spawn_egg",
+			() -> new ForgeSpawnEggItem(CreaperExplosionTutorialModEntities.CREEPER_THE_VANILLA_WAY, -1, -1,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }
